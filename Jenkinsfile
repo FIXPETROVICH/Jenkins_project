@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Clone repository') {
             steps {
-                git url: 'https://github.com/FIXPETROVICH/Jenkins_project.git',
+                git url: 'https://github.com/FIXPETROVICH/Project-fix.git',
                 credentialsId: "github2"
             }
         }
