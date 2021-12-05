@@ -8,7 +8,7 @@ pipeline {
         stage('Clone repository') {
             steps {
                 git url: 'git@github.com:Fixpetrovich/project-fix.git',
-                credentialsId: "jenkins"
+                credentialsId: "git_key"
             }
         }
         stage('Kubeval test') {
