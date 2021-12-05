@@ -16,8 +16,8 @@ pipeline {
                 sh """
                 kubeval manifests/deploy.yaml -o json
                 kubeval manifests/pv.yaml -o json
-		            kubeval manifests/pv2.yaml -o json
-	            	kubeval manifests/ingress.yaml -o json
+		kubeval manifests/pv2.yaml -o json
+	        kubeval manifests/ingress.yaml -o json
                 """
             }
         }
