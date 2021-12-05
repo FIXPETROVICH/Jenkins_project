@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Clone repository') {
             steps {
-                git url: 'git@github.com:Fixpetrovich\project-fix.git',
+                git url: 'git@github.com:Fixpetrovich/project-fix.git',
                 credentialsId: "git_key"
             }
         }
