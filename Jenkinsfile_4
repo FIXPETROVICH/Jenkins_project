@@ -11,7 +11,7 @@ pipeline {
                 credentialsId: "git_key"
             }
         }
-        stage('rollout 1.4') {
+        stage('Rollout 1.4') {
             steps {
                 sh """
                 cd manifests
