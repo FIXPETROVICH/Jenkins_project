@@ -11,7 +11,7 @@ pipeline {
                 credentialsId: "git_key"
             }
         }
-        stage('Del ingres word 5.3') {
+        stage('Ingress remove') {
             steps {
                 sh """
                 cd manifests
@@ -25,8 +25,8 @@ pipeline {
                 sh """
                 kubeval manifests/deploy.yaml -o json
                 kubeval manifests/pv.yaml -o json
-	              kubeval manifests/pv2.yaml -o json
-	              kubeval manifests/ingress.yaml -o json
+	        kubeval manifests/pv2.yaml -o json
+	        kubeval manifests/ingress.yaml -o json
                 """
             }
         }
