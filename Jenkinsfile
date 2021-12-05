@@ -14,10 +14,10 @@ pipeline {
         stage('Kubeval test') {
             steps {
                 sh """
-                kubeval manifests/deploy.yaml -o json
-                kubeval manifests/pv.yaml -o json
-		kubeval manifests/pv2.yaml -o json
-	        kubeval manifests/ingress.yaml -o json
+                kubeval manifests/deploy.yaml -o stdout
+                kubeval manifests/pv.yaml -o stdout
+		kubeval manifests/pv2.yaml -o stdout
+	        kubeval manifests/ingress.yaml -o stdout
                 """
             }
         }
